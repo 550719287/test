@@ -4,7 +4,6 @@ import win32api
 import win32con
 import win32process
 
-import sys
 # 获取窗体句柄
 # hWnd = win32gui.GetForegroundWindow()
 # #获取光标句柄
