@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Mytest	.\test.py	/^class Mytest(unittest.TestCase):$/;"	c
+TBinaryProtocol	.\client_test.py	/^from thrift.protocol import TBinaryProtocol  $/;"	i
+TBinaryProtocol	.\test.py	/^from thrift.protocol import TBinaryProtocol  $/;"	i
+THttpClient	.\client_test.py	/^from thrift.transport import THttpClient $/;"	i
+THttpClient	.\test.py	/^from thrift.transport import THttpClient $/;"	i
+TTransport	.\client_test.py	/^from thrift.transport import TTransport  $/;"	i
+TTransport	.\test.py	/^from thrift.transport import TTransport  $/;"	i
+Thrift	.\client_test.py	/^from thrift import Thrift   $/;"	i
+Thrift	.\test.py	/^from thrift import Thrift   $/;"	i
+UserService	.\client_test.py	/^import UserService$/;"	i
+UserService	.\test.py	/^import UserService$/;"	i
+a	.\client_test.py	/^a = ttypes.AccountInfo()$/;"	v
+client	.\client_test.py	/^client = UserService.Client(protocol)$/;"	v
+client	.\test.py	/^	client = UserService.Client(protocol)$/;"	v	class:Mytest
+logging	.\client_test.py	/^import logging$/;"	i
+logging	.\test.py	/^import logging$/;"	i
+protocol	.\client_test.py	/^protocol = TBinaryProtocol.TBinaryProtocol(transport)$/;"	v
+protocol	.\test.py	/^	protocol = TBinaryProtocol.TBinaryProtocol(transport)$/;"	v	class:Mytest
+setUp	.\test.py	/^	def setUp(self):$/;"	m	class:Mytest
+suite	.\test.py	/^	suite = unittest.makeSuite(Mytest)$/;"	v
+sys	.\client_test.py	/^import sys   $/;"	i
+sys	.\test.py	/^import sys   $/;"	i
+tearDown	.\test.py	/^	def tearDown(self):$/;"	m	class:Mytest
+test_2	.\test.py	/^	def test_2(self):$/;"	m	class:Mytest
+test_run	.\test.py	/^	def test_run(self):$/;"	m	class:Mytest
+time	.\client_test.py	/^import time$/;"	i
+time	.\test.py	/^import time$/;"	i
+traceback	.\client_test.py	/^import traceback$/;"	i
+traceback	.\test.py	/^import traceback$/;"	i
+transport	.\client_test.py	/^transport = THttpClient.THttpClient('10.32.173.200', 8085, '\/XK_Phr_Proxy\/UserServlet')  # ip  port projectname$/;"	v
+transport	.\client_test.py	/^transport = TTransport.TBufferedTransport(transport)$/;"	v
+transport	.\test.py	/^	transport = THttpClient.THttpClient('10.32.173.200', 8085, '\/XK_Phr_Proxy\/UserServlet')  # ip  port projectname$/;"	v	class:Mytest
+transport	.\test.py	/^	transport = TTransport.TBufferedTransport(transport)$/;"	v	class:Mytest
+ttypes	.\client_test.py	/^import ttypes$/;"	i
+ttypes	.\test.py	/^import ttypes$/;"	i
+unittest	.\test.py	/^import unittest$/;"	i
