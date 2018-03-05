@@ -8,7 +8,7 @@ from thrift.transport import THttpClient
 import time
 import sys   
 sys.path.append('D:/thrift/gen-py')  
-import ttypes
+from ttypes import *
 import UserService
 import traceback
 import logging
@@ -22,22 +22,42 @@ transport = THttpClient.THttpClient('10.32.173.200', 8085, '/XK_Phr_Proxy/UserSe
 transport = TTransport.TBufferedTransport(transport)
 protocol = TBinaryProtocol.TBinaryProtocol(transport)
 client = UserService.Client(protocol)
-def PHRcode(mac):
-	def get(mac):
-		phrcode = 1
-		usd = mac
-		lis = [phrcode,usd]
 
-	return get(mac)
+msg = MessageInfo()
+time1 = int(time.time())
+msgtime = str(time1)
+print msg
+msg = {
+	'fromPerson' : 'M5A1CFEDBE4B09F03008C774D',
+	'toPerson' : 'M55FA54FBE4B0BB9D487A7D17',
+	'messageTime' : msgtime,
+	'messageType' : '1',
+	'messageContent' : '123sgfdg',
+	'serviceid' : '',
+	'deviceid' : '',
+}
 
-@PHRcode('2')
-def run():
-	a = lis[0]
-	b = lis[1]
-	print a , b
 
-if __name__ == "__main__":
-	run()
+try:
+	print msg
+	assert client.messageNotify(msg) is None
+except BaseException , ex :
+	print ex
+	e = str(ex)
+	try:
+		assertpy.assert_that(e).contains('HealthServiceException')
+	except:
+		try:
+			assertpy.assert_that(e).contains('HTTP')
+		except:
+			print ex
+			raise TypeError('ICE Error')
+		else:
+			print ex.message
+			raise TypeError('HTTP ERROR')
+	else:
+		print(e)
+
 
 '''transport.open()  
 #log = open(time.strftime('%Y-%m-%d',time.localtime(time.time()))+".txt",'wb')
