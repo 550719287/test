@@ -13,13 +13,13 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 # url = 'http://dld.xikang.com/terminal/open/qqtls/getsig'
-url = 'http://10.32.144.67:9089/hhwebservice/rest/ws/report/reportUpload'
+url = 'http://10.32.151.35:9091/cityapi/rest/sensordi/yuwell'
 filename = r'C:\\Users\Administrator\Desktop\test\testcase_msg.xlsx'
 
 
 def api_request(url,data):
 
-	data = urllib.urlencode(data)
+	# data = urllib.urlencode(data)
 	# newurl = url + '/' + data
 	# response = urllib2.urlopen(newurl)
 	response = urllib.urlopen(url,data)
@@ -48,7 +48,7 @@ def api_data(filename):
 	# 	# msg = json.loads(ac_code)
 	# 	# print msg["msg"]
 		
-	data = xiaowu.xiaowu
+	data = "<xml> <device_sn>95FF13AFB4E803F2</device_sn> <device_user>0000</device_user> <device_type>000</device_type> <device_battery>98</device_battery> <mnc>0</mnc> <lac>52c0</lac> <cid>7031</cid> <measure_data>     <sbp>120</sbp>  <dbp>80</dbp>   <pulse_rate>60</pulse_rate>     <arrhythmia>0</arrhythmia> //心率不齐，0：否， 1：是，空值：未知    <measure_time>2014-09-09 10:10:00</measure_time> </measure_data> </xml> "
 	ac_code = api_request(url,data)
 	print ac_code  #获取到接口信息
 

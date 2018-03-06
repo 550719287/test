@@ -18,7 +18,7 @@ import assertpy
 import HTMLTestRunner                         #报表
 import logging                                #日志
 
-class client(unittest.TestCase,conf_sys):
+class client(unittest.TestCase):
 
 
 	def setUp(self):
