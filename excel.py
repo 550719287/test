@@ -4,51 +4,54 @@ import xlrd
 import openpyxl
 import requests
 import json
-import sys
-import HTMLParser
-import os
-import re
-import codecs
 import time
-import datetime
 import urllib
-
+import urllib2
+import xiaowu
+import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-url = ''
-filename = ''
+# url = 'http://dld.xikang.com/terminal/open/qqtls/getsig'
+url = 'http://10.32.144.67:9089/hhwebservice/rest/ws/report/reportUpload'
+filename = r'C:\\Users\Administrator\Desktop\test\testcase_msg.xlsx'
 
 
 def api_request(url,data):
 
-	data = urllib.parse.urlencode(data)
-	newurl = urllib.request.Request(url,data)
-	response1 = urllib.request.urlopen(newurl)
+	data = urllib.urlencode(data)
+	# newurl = url + '/' + data
+	# response = urllib2.urlopen(newurl)
+	response = urllib.urlopen(url,data)
 	result = response.read()
-	response2 = result.decode('utf-8')
-	code = response2.get('code')
-	return code
+	# msg = result("msg")
+	return result
 
 def api_data(filename):
 
-	book = xlrd.open_workbook(fileName)
-	sheet = book.sheet_by_index(0) #sheet页
-	nrows = sheet.nrows  #get all rows
+	# book = xlrd.open_workbook(filename)
+	# sheet = book.sheet_by_index(0) #sheet页
+	# nrows = sheet.nrows  #get all rows
 
 	#分别获取excel中每一个参数元素
-	for i in range(1,nrows):
-		param1 = sheet.cell_value(i,0)
-		param2 = sheet.cell_value(i,1)
-		param3 = sheet.cell_value(i,2)
+	# for i in range(1,nrows):
+	# 	param1 = sheet.cell_value(i,0)
+	# 	param2 = sheet.cell_value(i,1)
+	# 	param3 = sheet.cell_value(i,2)
+	# 	p1 = param1
+	# 	p2 = param2
+	# 	p3 = param3
+	# 	#对接口传参
+	# 	data = xiaowu.xiaowu
+	# 	ac_code = api_request(url,data)
+	# 	print ac_code  #获取到接口信息
+	# 	# msg = json.loads(ac_code)
+	# 	# print msg["msg"]
+		
+	data = xiaowu.xiaowu
+	ac_code = api_request(url,data)
+	print ac_code  #获取到接口信息
 
-		p1 = param1
-		p2 = param2
-		p3 = param3
-		#对接口传参
-		data = {
-		'param1' : p1,
-		'param2' : p2
-		}
-		ac_code = api_request(url,data)
+if __name__ == "__main__":  
+	api_data(filename)
 

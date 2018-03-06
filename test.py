@@ -54,26 +54,28 @@ import win32process
 # print np.random.randn(4, 1)
 
 
-def get_value(n):  
-    if n==1:  
-        return n  
-    else:  
-        return n * get_value(n-1)  
+# def get_value(n):  
+#     if n==1:  
+#         return n  
+#     else:  
+#         return n * get_value(n-1)  
           
-def gen_last_value(n,m):  
-     first = get_value(n)  
-     print "n:%s     value:%s"%(n, first)  
-     second = get_value(m)  
-     print "n:%s     value:%s"%(m, second)  
-     third = get_value((n-m))  
-     print "n:%s     value:%s"%((n-m), third)  
-     return first/(second * third)  
+# def gen_last_value(n,m):  
+#      first = get_value(n)  
+#      print "n:%s     value:%s"%(n, first)  
+#      second = get_value(m)  
+#      print "n:%s     value:%s"%(m, second)  
+#      third = get_value((n-m))  
+#      print "n:%s     value:%s"%((n-m), third)  
+#      return first/(second * third)  
        
-def get_Probability(rest,pro,num,ful):
-	return rest*pow(pro,num)*pow((1-pro),(ful-num))
+# def get_Probability(rest,pro,num,ful):
+# 	return rest*pow(pro,num)*pow((1-pro),(ful-num))
           
-if __name__ == "__main__":  
-    # C(12,5)  
-    rest = gen_last_value(95,1)  
-    print get_Probability(rest,0.028,1,95)
-
+# if __name__ == "__main__":  
+#     # C(12,5)  
+#     rest = gen_last_value(95,1)  
+#     print get_Probability(rest,0.028,1,95)
+import random
+a = random.randint(1,10)
+print a
