@@ -11843,7 +11843,7 @@ xiaowu = {
 import ConfigParser
 import json
 result = json.dumps(xiaowu, encoding='UTF-8', ensure_ascii=False)
-print '品牌id'.decode('utf-8')
+# print '品牌id'.decode('utf-8')
 print result
 with open('C:\Users\Administrator\Desktop\case1_HBP9021.txt','w') as f:
     f.write(result)
