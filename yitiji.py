@@ -1,4 +1,5 @@
-#coding = utf-8
+# -*- coding: utf-8 -*-
+# 
 import unittest ,time 
 from appium import webdriver  
 from selenium.webdriver.common.keys import Keys
@@ -22,46 +23,18 @@ contexts = driver.contexts
 
 driver.find_element_by_id('com.xikang.acornapppublichealth:id/btn_select_resident').click()
 driver.implicitly_wait(5)
-
-'''driver.find_element_by_xpath('//android.widget.Spinner[@resource-id=\"com.xikang.acornapppublichealth:id/resident_filter_spinner\"]').click()
-driver.implicitly_wait(5)
-
-driver.find_element_by_xpath('//android.widget.TextView[@resource-id=\"com.xikang.acornapppublichealth:id/txtvSpinner\" and @text=\"姓名\"]').click()
-
-driver.tap([(448,115),(884,165)])
-#print contexts
-#driver.back()
-time.sleep(3)
-
-driver.find_element_by_id('com.xikang.acornapppublichealth:id/resident_entry_text').send_keys(u"陶映阳")
-driver.implicitly_wait(5)
-driver.tap([(448,115),(884,165)])
-
-driver.implicitly_wait(5)
-driver.find_element_by_xpath('//android.widget.Button[@resource-id=\"com.xikang.acornapppublichealth:id/resident_search_btn\"]').click()'''
-
-driver .find_element_by_xpath('//android.widget.ListView[@resource-id=\"com.xikang.acornapppublichealth:id/content_view\"]/android.widget.LinearLayout[1]').click()
-driver.implicitly_wait(5)
-driver.find_element_by_xpath('//android.widget.Button[@resource-id=\"com.xikang.acornapppublichealth:id/btn_modify_persionalfiles\"]').click()
-driver.implicitly_wait(5)
-driver.find_element_by_xpath('//android.widget.Spinner[@resource-id=\"com.xikang.acornapppublichealth:id/nation_filter_spinner\"]').click()
-driver.implicitly_wait(5)
-time.sleep(2)
-driver.find_element_by_xpath('//android.widget.TextView[@text=\"布依族\"]').click()
-driver.implicitly_wait(5)
-driver.tap([(276,540),(451,599)])
-driver.swipe(451,785,451,242,8000)
-driver.implicitly_wait(10)
-driver.swipe(451,723,451,211,8000)
-driver.implicitly_wait(10)
-driver.find_element_by_xpath('//android.widget.CheckBox[@resource-id=\"com.xikang.acornapppublichealth:id/check_payworker_modify\"]').click()
-driver.implicitly_wait(5)
-driver.find_element_by_xpath('//android.widget.Spinner[@resource-id=\"com.xikang.acornapppublichealth:id/disease_filter_spinner1\"]').click()
-driver.implicitly_wait(5)
-time.sleep(2)
+# driver.find_element_by_xpath('//android.widget.Spinner[@resource-id=\"com.xikang.acornapppublichealth:id/resident_filter_spinner\"]').click()
+# driver.implicitly_wait(5)
 print contexts
-driver.find_element_by_xpath('//android.widget.TextView[@text=\"冠心病\"]').click()
-print contexts
-driver.implicitly_wait(5)
-driver.tap([(276,308),(451,418)])
-driver.find_element_by_xpath('//android.widget.EditText[@resource-id=\"com.xikang.acornapppublichealth:id/edit_disease_description_modify1\"]').clear()
+# driver.find_element_by_class_name('android.widget.LinearLayout').click()
+
+driver.tap([(833,262),(1007,295)])
+# #print contexts
+# #driver.back()
+# time.sleep(3)
+
+
+# driver.implicitly_wait(5)
+# driver.tap([(448,115),(884,165)])
+
+# print contexts

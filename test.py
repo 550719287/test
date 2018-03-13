@@ -76,6 +76,6 @@ import win32process
 #     # C(12,5)  
 #     rest = gen_last_value(95,1)  
 #     print get_Probability(rest,0.028,1,95)
-import random
-a = random.randint(1,10)
-print a
+# import random
+# a = random.randint(1,10)
+# print a
