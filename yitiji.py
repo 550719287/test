@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# 
+
 import unittest ,time 
 from appium import webdriver  
 from selenium.webdriver.common.keys import Keys
@@ -23,12 +23,25 @@ contexts = driver.contexts
 
 driver.find_element_by_id('com.xikang.acornapppublichealth:id/btn_select_resident').click()
 driver.implicitly_wait(5)
+print contexts 
+# driver.tap([(80,204),(324,237)])
+driver.find_element_by_xpath('//android.widget.ListView[@resource-id=\"com.xikang.acornapppublichealth:id/content_view\"]/android.widget.LinearLayout[5]').click()
+driver.implicitly_wait(5)
+driver.find_element_by_xpath('//android.widget.RadioButton[@resource-id=\"com.xikang.acornapppublichealth:id/button_m\"]').click()
+driver.implicitly_wait(5)
+driver.find_element_by_xpath('//android.widget.ListView[@resource-id=\"com.xikang.acornapppublichealth:id/lv_maternal\"]/android.widget.LinearLayout[1]').click()
+driver.implicitly_wait(5)
+driver.find_element_by_xpath('//android.widget.TextView[@resource-id=\"com.xikang.acornapppublichealth:id/tv_after_check_status\"]').click()
+driver.implicitly_wait(5)
+driver.find_element_by_xpath('//android.widget.Button[@resource-id=\"com.xikang.acornapppublichealth:id/btn_back\"]').click()
+driver.implicitly_wait(5)
+assert '789' in driver.find_element_by_id('com.xikang.acornapppublichealth:id/tv_after42_check_status').text
 # driver.find_element_by_xpath('//android.widget.Spinner[@resource-id=\"com.xikang.acornapppublichealth:id/resident_filter_spinner\"]').click()
 # driver.implicitly_wait(5)
 print contexts
 # driver.find_element_by_class_name('android.widget.LinearLayout').click()
 
-driver.tap([(833,262),(1007,295)])
+# driver.tap([(833,262),(1007,295)])
 # #print contexts
 # #driver.back()
 # time.sleep(3)
