@@ -1,0 +1,10 @@
+def func(a,b):
+	if a>b:
+		break#跳出循环
+		pass#继续执行下一个print 23
+		return#终止函数
+	else:
+		print '1'
+	print 23
+
+func(1,2)
